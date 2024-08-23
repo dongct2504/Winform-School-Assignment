@@ -79,16 +79,66 @@ namespace BaiTapBuoi9KetNoiDuLieu
             {
                 sqlConnection.Open();
 
-                string strAdd = "INSERT INTO PhongBan " +
+                string addQuery =
+                    "INSERT INTO PhongBan " +
                     "(TenPhongBan) " +
                     "VALUES " +
                     $"('{txtDepartment.Text}')";
 
-                SqlCommand sqlCommand = new SqlCommand(strAdd, sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand(addQuery, sqlConnection);
                 sqlCommand.ExecuteNonQuery();
 
                 txtDepartment.Clear();
                 txtDepartment.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+                FrmBaiTapBuoi9_Load(sender, e);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //txtCode.Enabled = false;
+            //txtDepartment.Focus();
+            try
+            {
+                sqlConnection.Open();
+
+                string updateQuery =
+                    "UPDATE PhongBan " +
+                    $"SET TenPhongBan = '{txtDepartment.Text}' " +
+                    $"WHERE MaPhongBan = '{txtCode.Text}'";
+
+                SqlCommand sqlCommand = new SqlCommand(updateQuery, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+                FrmBaiTapBuoi9_Load(sender, e);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+
+                string deleteQuery = $"DELETE FROM PhongBan WHERE MaPhongBan = {txtCode.Text}";
+
+                SqlCommand sqlCommand = new SqlCommand(deleteQuery, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

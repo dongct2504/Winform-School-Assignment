@@ -31,16 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtDepartment = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtDepartment = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
@@ -77,6 +77,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(668, 237);
             this.panel2.TabIndex = 1;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(551, 111);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(117, 49);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Xoa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(551, 56);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(117, 49);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Sua";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -120,40 +140,6 @@
             this.panel3.Size = new System.Drawing.Size(668, 65);
             this.panel3.TabIndex = 1;
             // 
-            // txtDepartment
-            // 
-            this.txtDepartment.Location = new System.Drawing.Point(137, 30);
-            this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Size = new System.Drawing.Size(271, 22);
-            this.txtDepartment.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Ten phong ban";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(551, 56);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(117, 49);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Sua";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(551, 111);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(117, 49);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Xoa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(137, 3);
@@ -169,6 +155,22 @@
             this.label3.Size = new System.Drawing.Size(93, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ma phong ban";
+            // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Location = new System.Drawing.Point(137, 30);
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Size = new System.Drawing.Size(271, 22);
+            this.txtDepartment.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Ten phong ban";
             // 
             // FrmBaiTapBuoi9
             // 
